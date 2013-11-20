@@ -20,5 +20,13 @@ void moveRightForward();
 
 void moveLeftBackWard();
 
+void moveRightBackward();
+
+void moveBackward();
+
+void rightTurn();
+
+void leftTurn();
+
 
 #endif /* ROBOT_MOTION_H_ */
