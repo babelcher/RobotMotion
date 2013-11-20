@@ -12,7 +12,13 @@ void InitPinsOut();
 
 void InitTimer();
 
+void moveForward();
 
+void moveLeftForward();
+
+void moveRightForward();
+
+void moveLeftBackWard();
 
 
 #endif /* ROBOT_MOTION_H_ */

@@ -1,4 +1,5 @@
 #include <msp430.h> 
+#include "robot_motion.h"
 
 /*
  * main.c
@@ -6,17 +7,12 @@
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
+    InitPinsOut();
+    InitTimer();
 
 
 	while (1) {
-		__delay_cycles(1000000);
-		TACCR1 = 50;            // set duty cycle to 50/100 (50%)
-		__delay_cycles(1000000);
-		TACCR1 = 75;            // set duty cycle to 75/100 (75%)
-		__delay_cycles(1000000);
-		TACCR1 = 100;            // set duty cycle to 100/100 (100%)
-		__delay_cycles(1000000);
-		TACCR1 = 25;            // set duty cycle to 25/100 (25%)
+		moveForward();
 	}
 
 	return 0;

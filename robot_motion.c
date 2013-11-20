@@ -1,3 +1,5 @@
+#include <msp430.h>
+#include "robot_motion.h"
 /*
  * robot_motion.c
  *
@@ -44,5 +46,19 @@ void InitTimer() {
 
 void moveLeftForward(){
 	TA0CCR1 = 50;
+}
+
+void moveRightForward(){
+	TA1CCR1 = 50;
+}
+
+void moveLeftBackward(){
+//	TA0CCR1 = 0;
+	TA0CCR0 = 50;
+}
+
+void moveForward(){
+	moveLeftForward();
+	moveRightForward();
 }
 
