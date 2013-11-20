@@ -52,7 +52,7 @@ void moveLeftForward(){
 	TA0CCTL0 = OUTMOD_5;
 }
 
-void moveRightForward(){
+void moveRightBackward(){
 	TA1CCR1 = 50;
 	TA1CCTL0 = OUTMOD_5;
 }
@@ -62,7 +62,7 @@ void moveLeftBackward(){
 	TA0CCTL0 = OUTMOD_4;
 }
 
-void moveRightBackward(){
+void moveRightForward(){
 	TA1CCR1 = 0;
 	TA1CCTL0 = OUTMOD_4;
 }

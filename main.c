@@ -12,9 +12,9 @@ int main(void) {
 
 
 	while (1) {
-		moveRightBackward();
+		rightTurn();
 		_delay_cycles(1000000);
-		moveRightForward();
+		leftTurn();
 		_delay_cycles(1000000);
 	}
 
