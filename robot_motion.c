@@ -49,6 +49,7 @@ void InitTimer() {
 
 void moveLeftForward(){
 	TA0CCR1 = 50;
+	TA0CCTL0 = OUTMOD_5;
 }
 
 void moveRightForward(){

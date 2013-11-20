@@ -13,6 +13,9 @@ int main(void) {
 
 	while (1) {
 		moveLeftBackward();
+		_delay_cycles(1000000);
+		moveLeftForward();
+		_delay_cycles(1000000);
 	}
 
 	return 0;
