@@ -31,10 +31,8 @@ void InitTimer() {
 	TA0CTL |= TASSEL1;           // configure for SMCLK
 	TA1CTL |= TASSEL1;
 
-	TA0CCR0 = 100;   //TA0.0	left backward set signal period to 100 clock cycles (~100 microseconds)
-	TA1CCR0 = 100;	//TA1.0		right backward
-	TA0CCR1 = 0;	//TA0.1		left forward
-	TA1CCR1 = 0;	//TA1.1		right forward
+	TA0CCR0 = 100;  //fset signal period to 100 clock cycles (~100 microseconds)
+	TA0CCR1 = 10;	//set the duty cycle to 50%
 
 	TA0CCTL1 |= OUTMOD_7;
 	TA1CCTL1 |= OUTMOD_7;
@@ -44,21 +42,33 @@ void InitTimer() {
 
 }
 
-void moveLeftForward(){
-	TA0CCR1 = 50;
+void moveLeftForward() {
+	P1DIR |= BIT1;
+	P1SEL |= BIT1;
 }
 
-void moveRightForward(){
-	TA1CCR1 = 50;
+void moveRightForward() {
+	P2DIR |= BIT1;
+	P2SEL |= BIT1;
 }
 
-void moveLeftBackward(){
-//	TA0CCR1 = 0;
-	TA0CCR0 = 50;
+void moveLeftBackward() {
+	P1DIR |= BIT2;
+	P1SEL |= BIT2;
 }
 
-void moveForward(){
+void moveRightBackward() {
+	P2DIR |= BIT0;
+	P2SEL |= BIT0;
+}
+
+void moveForward() {
 	moveLeftForward();
 	moveRightForward();
+}
+
+void rightTurn(){
+	moveLeftForward();
+	moveRightBackward();
 }
 

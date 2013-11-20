@@ -7,12 +7,12 @@
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
-    InitPinsOut();
+//    InitPinsOut();
     InitTimer();
 
 
 	while (1) {
-		moveForward();
+		rightTurn();
 	}
 
 	return 0;
