@@ -12,7 +12,7 @@ int main(void) {
 
 
 	while (1) {
-		moveLeftForward();
+		moveLeftBackward();
 	}
 
 	return 0;
