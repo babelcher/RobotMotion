@@ -31,10 +31,10 @@ void InitTimer() {
 	TA0CTL |= TASSEL1;           // configure for SMCLK
 	TA1CTL |= TASSEL1;
 
-	TA0CCR0 = 100;   //TA0.0	left backward set signal period to 100 clock cycles (~100 microseconds)
-	TA1CCR0 = 100;	//TA1.0		right backward
-	TA0CCR1 = 0;	//TA0.1		left forward
-	TA1CCR1 = 0;	//TA1.1		right forward
+	TA0CCR0 = 100;   // set signal period to 100 clock cycles (~100 microseconds)
+	TA1CCR0 = 100;	//
+	TA0CCR1 = 0;	//
+	TA1CCR1 = 0;	//
 
 	TA0CCTL1 |= OUTMOD_7;
 	TA0CCTL0 |= OUTMOD_5;

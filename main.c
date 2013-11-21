@@ -12,6 +12,14 @@ int main(void) {
 
 
 	while (1) {
+		moveForward();
+		_delay_cycles(1000000);
+		moveBackward();
+		_delay_cycles(1000000);
+		rightTurn();
+		_delay_cycles(500000);
+		leftTurn();
+		_delay_cycles(500000);
 		rightTurn();
 		_delay_cycles(1000000);
 		leftTurn();
