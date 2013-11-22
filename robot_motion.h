@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 20, 2013
  *      Author: C15Brandon.Belcher
+ *      Description: Header file for the robot motion library.
  */
 
 #ifndef ROBOT_MOTION_H_
